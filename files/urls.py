@@ -7,4 +7,5 @@ app_name = FileConfig.name
 
 urlpatterns = [
     path('upload/', FileCreateAPIView.as_view(), name='file-upload'),
+    path('upload/', FileCreateAPIView.as_view(), name='files-list'),
 ]
