@@ -16,3 +16,8 @@ class FileCreateAPIView(generics.CreateAPIView):
         serializer = FileSerializer(instance)
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
+class FileListAPIView(generics.ListAPIView):
+    queryset = File.objects.all()
+    serializer_class = FileSerializer
