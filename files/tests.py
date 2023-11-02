@@ -14,8 +14,6 @@ class FileTestCase(APITestCase):
         )
         self.client.force_authenticate(user=self.user)
 
-        self.file = File.objects.create(file='1')
-
     def test_get_files(self):
         url = reverse('files:files-list')
         response = self.client.get(url)
